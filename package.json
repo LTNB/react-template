@@ -1,0 +1,59 @@
+{
+  "name": "admin-template-demo",
+  "version": "1.0.0",
+  "description": "Admin Teamplate with ReactJS and CoreUI",
+  "license": "MIT",
+  "main": "dist/ai/index.js",
+  "scripts": {
+    "start": "PORT=9000 node server.dev.js",
+    "build": "parcel build src/index.html --no-source-maps --no-content-hash",
+    "watch": "SET PORT=5000 && node server.dev.js"
+  },
+  "dependencies": {
+    "@coreui/coreui": "2.1.12",
+    "ag-grid-community": "21.1.1",
+    "ag-grid-react": "21.1.0",
+    "antd": "3.26.4",
+    "axios": "0.19.0",
+    "date-fns": "2.0.1",
+    "echarts": "4.5.0",
+    "echarts-for-react": "2.0.15-beta.1",
+    "font-awesome": "4.7.0",
+    "jquery": "3.4.1",
+    "lodash": "4.17.15",
+    "perfect-scrollbar": "1.4.0",
+    "popper.js": "1.15.0",
+    "react": "16.9.0",
+    "react-datepicker": "2.8.0",
+    "react-dom": "16.9.0",
+    "react-router-dom": "5.1.0",
+    "rxjs": "6.5.2",
+    "src": "1.1.2",
+    "toastr": "2.1.4"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "4.3.1",
+    "@types/lodash": "4.14.138",
+    "@types/node": "12.7.2",
+    "@types/react": "16.9.2",
+    "@types/react-datepicker": "2.8.1",
+    "@types/react-dom": "16.9.0",
+    "@types/react-router-dom": "4.3.5",
+    "@types/toastr": "2.1.37",
+    "express": "4.17.1",
+    "http-proxy-middleware": "0.19.1",
+    "parcel-bundler": "1.12.3",
+    "parcel-plugin-static-files-copy": "2.2.1",
+    "sass": "1.22.10",
+    "sqlite3": "4.1.0",
+    "typescript": "3.6.2"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "src/assets",
+        "staticOutDir": "assets"
+      }
+    ]
+  }
+}

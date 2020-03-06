@@ -1,0 +1,21 @@
+.react-datepicker-popper {
+  &[data-placement="top-end"], &[data-placement="bottom-end"] {
+    .react-datepicker__triangle {
+      left: auto;
+      right: 50px;
+    }
+  }
+}
+
+.date-picker {
+  position: relative;
+  .react-datepicker-wrapper {
+    width: 100%;
+    .react-datepicker__input-container { width: 100%; }
+  }
+  .fa-calendar {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+  }
+}

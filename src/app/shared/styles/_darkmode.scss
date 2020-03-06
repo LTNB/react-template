@@ -1,0 +1,247 @@
+.dark-mode {
+  $color: #e4e7ea;
+  $bg-color: rgb(51, 51, 51);
+  $border-color: rgba(255, 255, 255, .12);
+  $border: 1px solid $border-color;
+  $header-color: rgba(128, 128, 128, 0.2);
+  $header-color-light: #73818f;
+
+  background-color: rgb(30, 30, 30);
+  color: $color;
+
+  .app-header {
+    background-color: $bg-color;
+    border-bottom: $border;
+  }
+
+  .app-footer {
+    color: $color;
+    background-color: $bg-color;
+    border-top: $border;
+  }
+
+  .sidebar {
+    background-color: $bg-color;
+    border-right: $border;
+  }
+
+  .mask {
+    .mask-msg {
+      background-color: $header-color;
+      border-left: $border;
+      border-right: $border;
+      border-bottom: $border;
+      .mask-msg-text {
+        color: $color !important;
+      }
+    }
+  }
+
+  .breadcrumb {
+    background-color: $bg-color;
+    border-bottom: $border;
+    .breadcrumb-item {
+      &:before {
+        border-left: 24px solid $border-color;
+      }
+      &:after {
+        border-left: 24px solid $bg-color;
+      }
+    }
+  }
+
+  .btn-outline-secondary {
+    color: $color !important;
+    background-color: $bg-color !important;
+    border: $border !important;
+  }
+
+  .dropdown-menu {
+    color: $color;
+    background-color: $bg-color;
+    border: $border;
+    .dropdown-item {
+      color: $color;
+      border-bottom: $border;
+      &:hover, &:focus {
+        background-color: $header-color;
+      }
+      &.active {
+        background-color: #20a8d8;
+      }
+    }
+  }
+
+  .form-control {
+    color: $color;
+    background-color: $bg-color;
+    border: $border;
+    &[readonly], &[disabled] {
+      background-color: transparent;
+    }
+  }
+
+  .input-group {
+    .input-group-prepend {
+      .btn {
+        color: $color;
+        background-color: $bg-color;
+        border: $border;
+      }
+    }
+    .input-group-text {
+      color: $color;
+      background-color: $bg-color;
+      border: $border;
+    }
+  }
+
+  .card {
+    background-color: $bg-color;
+    border: $border;
+    .card-header {
+      background-color: $header-color;
+      border-bottom: $border;
+      .nav-tabs {
+        .nav-link {
+          &:hover, &:focus {
+            color: $color;
+            border-color: $border-color;
+          }
+          &.active {
+            color: $color;
+            background-color: $bg-color;
+            border-color: $border-color;
+            border-bottom-color: transparent;
+            border-top: $border;
+          }
+        }
+      }
+    }
+    .card-footer {
+      background-color: $header-color;
+      border-top: $border;
+    }
+  }
+
+  .c3 {
+    path, .tick line { stroke: $border-color; }
+    .tick text, .c3-legend-item text, .c3-chart-arcs-title { fill: $color; }
+    .c3-tooltip {
+      th {
+        background-color: $bg-color;
+      }
+      td {
+        background-color: $bg-color;
+      }
+    }
+  }
+
+  .ag-theme-balham {
+    color: $color;
+    .ag-root {
+      background-color: $bg-color;
+      .ag-header {
+        background-color: $header-color;
+        color: $color;
+        border-bottom: $border;
+      }
+      .ag-body-viewport {
+        .ag-row {
+          border-color: $border-color;
+          &.ag-row-even {
+            background-color: $bg-color;
+          }
+          &.ag-row-odd {
+            background-color: rgba(255, 255, 255, .05);
+          }
+          &.ag-row-hover {
+            background-color: rgba(255, 255, 255, .075);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .ag-floating-top {
+      border-bottom: $border;
+    }
+    .ag-row-selected {
+      background-color: #4a708b !important;
+      .text-primary {
+        color: $color !important;
+      }
+    }
+    .ag-icon-checkbox-checked, .ag-icon-checkbox-indeterminate, .ag-icon-checkbox-unchecked {
+      background-color: $bg-color;
+    }
+  }
+
+  .react-datepicker {
+    background-color: $bg-color;
+    border: $border;
+    .react-datepicker__triangle {
+      border-bottom-color: $header-color;
+      &::before {
+        border-bottom-color: $header-color;
+      }
+    }
+    .react-datepicker__header {
+      background-color: $header-color;
+      border-bottom: $border;
+      .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+        color: $color;
+      }
+      .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+        color: $color;
+      }
+    }
+    .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+      color: $color;
+      &:hover {
+        color: $bg-color;
+      }
+    }
+  }
+
+  .modal-content {
+    background-color: $bg-color;
+    border: $border;
+    .modal-header {
+      border-bottom: $border;
+    }
+  }
+
+  .border {
+    border: $border !important;
+  }
+
+  @each $side in (top, right, bottom, left) {
+    .border-#{$side} {
+      border-#{$side}: $border !important;
+    }
+    .border-#{$side}-0 {
+      border-#{$side}: 0 !important;
+    }
+  }
+
+  .bg-white {
+    background-color: $bg-color !important;
+  }
+
+  .badge-secondary {
+    color: $color;
+    background-color: $header-color;
+  }
+
+  .ag-paging-panel {
+    background-color: #333333;
+    color: $color;
+    .ag-paging-page-summary-panel {
+      .ag-paging-button {
+        .ag-icon  {
+          color: white;
+        }
+      }
+    }
+  }
+}

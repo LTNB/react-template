@@ -1,0 +1,131 @@
+@import 'variables';
+@import 'mixin';
+
+html, body, .app, .app-body, .main, .fluid { @include full-screen(); }
+
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.app-footer {
+  flex: 0 0 25px;
+}
+
+.main {
+  &:before {
+    content: none !important;
+  }
+  .container-fluid { padding: 0 1rem; }
+}
+
+.sidebar {
+  .nav-link {
+    word-break: break-word;
+    &:hover {
+      background: #3a4248;
+    }
+    &.active {
+      background: #20a8d8;
+    }
+  }
+}
+
+button:focus, button:active, .form-control:focus, .form-control:active {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.card {
+  margin-bottom: 1rem;
+  .card-header {
+    padding: .5rem 1rem;
+    .nav-tabs {
+      margin-top: 0;
+      margin-bottom: -.5rem;
+      margin-left: 0;
+      margin-right: 0;
+      .nav-link{
+        padding: .5rem;
+        &:hover, &.active {
+          border-top: $border;
+        }
+      }
+    }
+  }
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+.dropdown {
+  .dropdown-item-list {
+    max-height: 12rem;
+    overflow-y: auto;
+  }
+}
+
+.breadcrumb {
+  min-height: 3rem;
+  max-height: 3rem;
+  padding: .5rem 1rem;
+  margin-bottom: 0;
+  .breadcrumb-item {
+    margin-top: .25rem;
+    padding-left: 2rem;
+    position: relative;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      margin-top: -13px;
+      margin-left: 1px;
+      left: 100%;
+      border-top: 24px solid transparent;
+      border-bottom: 24px solid transparent;
+      border-left: 24px solid $gray;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      margin-top: -13px;
+      left: 100%;
+      border-top: 24px solid transparent;
+      border-bottom: 24px solid transparent;
+      border-left: 24px solid $white;
+    }
+  }
+  .ml-auto {
+    >.btn {
+      margin-top: -1px;
+    }
+  }
+}
+
+.form-control[readonly], .form-control:disabled {
+  background-color: $white;
+  border: $border;
+}
+
+.btn-secondary {
+  border: $border !important;
+}
+
+#toast-container {
+  .toast {
+    opacity: 1 !important;
+    &.toast-success {
+      background-color: $success !important;
+    }
+    &.toast-error {
+      background-color: $danger !important;
+    }
+    &.toast-info {
+      background-color: $info !important;
+    }
+    &.toast-warning {
+      background-color: $warning !important;
+    }
+  }
+}

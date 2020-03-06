@@ -1,0 +1,16 @@
+// Bootstrap variable overrides
+$grid-gutter-width: 2rem;
+$theme-colors: (
+  "secondary": #fff,
+);
+
+@import '../node_modules/@coreui/coreui/scss/coreui.scss';
+
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/toastr/build/toastr.min.css';
+@import '../node_modules/ag-grid-community/dist/styles/ag-grid.css';
+@import '../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css';
+@import '../node_modules/react-datepicker/dist/react-datepicker.css';
+@import '../node_modules/antd/dist/antd.css';
+
+@import 'app/app.component';
