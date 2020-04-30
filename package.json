@@ -19,7 +19,7 @@
     "echarts": "4.5.0",
     "echarts-for-react": "2.0.15-beta.1",
     "font-awesome": "4.7.0",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "lodash": "4.17.15",
     "perfect-scrollbar": "1.4.0",
     "popper.js": "1.15.0",
